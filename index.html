@@ -1,0 +1,82 @@
+<Html>
+    <head>
+        <title> Agora Homework - 2</title> 
+    </head>
+    <body>
+        <span id = "headingText"> Online Basic <strong> Calculator </strong> </span>
+        <br/>
+        <input type="text" id="firstOperand" name = "firstOperand"/> 
+        <input type="text" id="secondOperand" name = "secondOperand"/>
+        <button class="operator" type = "button" onclick = "add()"> Add </button>
+        <button class="operator" type = "button" onclick = "subtract()"> Subtract </button>
+        <button class="operator" type = "button" onclick = "multiply()"> Multiply </button>
+        <button class="operator" type = "button" onclick = "divide()"> Divide </button>
+        <input type = "text" name = "answer" value = "returnAnswer()"/>
+        <script>
+            let answer;
+            function add(){
+                let first = document.getElementById("firstOperand");
+                let second = document.getElementById("secondOperand");
+
+                if(first.value.match(/\d+/) && second.value.match(/\d+/)) {
+                    first = parseInt(first.value);
+                    second = parseInt(second.value);
+                    answer = first + second;
+                    console.log(first + second);
+                    return answer;
+                } else {
+                    alert("Please enter a number.");
+                    return false;
+                }
+            }
+            function subtract(){
+                let first = document.getElementById("firstOperand");
+                let second = document.getElementById("secondOperand");
+
+                if(first.value.match(/\d+/) && second.value.match(/\d+/)) {
+                    first = parseInt(first.value);
+                    second = parseInt(second.value);
+                    answer = first - second;
+                    console.log(first - second);
+                    return answer;
+                } else {
+                    alert("Please enter a number.");
+                    return false;
+                }
+            }
+            function multiply(){
+                let first = document.getElementById("firstOperand");
+                let second = document.getElementById("secondOperand");
+
+                if(first.value.match(/\d+/) && second.value.match(/\d+/)) {
+                    first = parseInt(first.value);
+                    second = parseInt(second.value);
+                    answer = first * second;
+                    console.log(first * second);
+                    return answer;
+                } else {
+                    alert("Please enter a number.");
+                    return false;
+                }
+            }
+            function divide(){
+                let first = document.getElementById("firstOperand");
+                let second = document.getElementById("secondOperand");
+
+                if(first.value.match(/\d+/) && second.value.match(/\d+/)) {
+                    first = parseInt(first.value);
+                    second = parseInt(second.value);
+                    answer = first / second;
+                    console.log(first / second);
+                    return answer;
+                } else {
+                    alert("Please enter a number.");
+                    return false;
+                }
+            }
+            function returnAnswer(){
+                return answer;
+            }
+        </script>
+    </body>
+</Html>
